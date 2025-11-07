@@ -39,7 +39,7 @@ const product = {
 };
 const finalPrice = product.price * (1 - product.discount / 100);
 const productCard = `
-  <div class="product-card" style="border:1px solid #ccc; padding:15px; width:250px; border-radius:10px;">
+  <div class="product-card">
     <h2>${product.name}</h2>
     <p>Giá gốc: <del>${product.price.toLocaleString()}đ</del></p>
     <p>Giảm giá: ${product.discount}%</p>
