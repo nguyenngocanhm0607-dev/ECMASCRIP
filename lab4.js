@@ -1,12 +1,20 @@
 //Array destructuring
 //bài1:
 function getFirstLast(array) {
+    if (!Array.isArray(array)) {
+        return "Lỗi: Tham số truyền vào không phải là mảng!";
+    }
+    if (array.length === 0) {
+        return "Lỗi: Mảng rỗng!";
+    }
     const first = array[0];
     const last = array[array.length - 1];
     return [first, last];
 }
 
 console.log(getFirstLast([1, 2, 3, 4]));
+console.log(getFirstLast([]));
+console.log(getFirstLast("Hello"));
 // bài2:
 function swapElements(arr) {
     const newArr = [...arr];
